@@ -1,0 +1,216 @@
+.cfb-page {
+  display: grid;
+  gap: 16px;
+  max-width: 1000px;
+  color: #1c2538;
+  font-size: 14px;
+}
+
+.cfb-page * {
+  box-sizing: border-box;
+}
+
+.cfb-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.cfb-eyebrow {
+  color: #2557d6;
+  font-size: 11px;
+  font-weight: 750;
+  letter-spacing: 1px;
+}
+
+.cfb-head h1 {
+  margin: 4px 0;
+  font-size: 26px;
+  letter-spacing: -0.6px;
+}
+
+.cfb-head p,
+.cfb-muted {
+  margin: 0;
+  max-width: 640px;
+  color: #6b778c;
+}
+
+.cfb-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border: 1px solid #d6deeb;
+  border-radius: 9px;
+  background: #fff;
+  color: #303d52;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 650;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cfb-button:disabled {
+  opacity: 0.6;
+}
+
+.cfb-spin {
+  animation: cfb-spin 1s linear infinite;
+}
+
+@keyframes cfb-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.cfb-summary {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.cfb-summary > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 18px;
+  border: 1px solid #e4e9f3;
+  border-radius: 13px;
+  background: #fff;
+}
+
+.cfb-summary svg {
+  color: #2557d6;
+}
+
+.cfb-summary span {
+  color: #5f6b80;
+}
+
+.cfb-summary strong {
+  margin-left: auto;
+  font-size: 20px;
+}
+
+.cfb-summary .g8-rating {
+  margin-left: auto;
+  font-size: 14px;
+}
+
+.cfb-tabs {
+  display: flex;
+  gap: 6px;
+}
+
+.cfb-tabs button {
+  padding: 8px 13px;
+  border: 1px solid #dfe5ef;
+  border-radius: 999px;
+  background: #fff;
+  color: #4a566b;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.cfb-tabs button.is-active {
+  border-color: #2557d6;
+  background: #2557d6;
+  color: #fff;
+}
+
+.cfb-error {
+  margin: 0;
+  padding: 10px 12px;
+  border-radius: 9px;
+  background: #fdecec;
+  color: #a12b2b;
+}
+
+.cfb-empty {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 48px 20px;
+  border: 1px dashed #d8dfed;
+  border-radius: 14px;
+  background: #fff;
+  color: #6b778c;
+  text-align: center;
+}
+
+.cfb-empty h2 {
+  margin: 0;
+  color: #1c2538;
+  font-size: 17px;
+}
+
+.cfb-empty p {
+  margin: 0;
+}
+
+.cfb-list {
+  display: grid;
+  gap: 14px;
+}
+
+.cfb-card {
+  display: grid;
+  gap: 12px;
+  padding: 18px 20px;
+  border: 1px solid #e4e9f3;
+  border-radius: 14px;
+  background: #fff;
+}
+
+.cfb-card-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.cfb-card-head h3 {
+  margin: 0 0 3px;
+  font-size: 16px;
+}
+
+.cfb-card-head p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  color: #6b778c;
+}
+
+.cfb-pill {
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cfb-pill.is-completed {
+  background: #e6f7ed;
+  color: #23834b;
+}
+
+.cfb-pill.is-work_rejected {
+  background: #fff0f0;
+  color: #b83232;
+}
+
+@media (max-width: 640px) {
+  .cfb-summary {
+    grid-template-columns: 1fr;
+  }
+}
